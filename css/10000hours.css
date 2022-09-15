@@ -103,6 +103,10 @@ button {
     /* 이 페이지 내에서 버튼은 모두 비슷한 스타일로 쓰일 거라 생각하여 태그 선택자 사용 */
     border: none;
 }
+button:hover {
+    cursor: pointer;
+}
+
 /* 사용자 입력 */
 #for,
 #hour {
