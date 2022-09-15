@@ -1,0 +1,187 @@
+@font-face {
+    font-family: "OTEnjoystoriesBA";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GmarketSansMedium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format("woff2"), url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format("woff"),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format("opentype");
+}
+
+/* 폰트 설정, 배경 설정 */
+:root,
+#for::placeholder,
+#hour::placeholder {
+    font-family: "GmarketSansMedium";
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+.expr-rule strong,
+.btn-input button,
+.btn-go,
+.btn-share {
+    font-family: "GmarketSansBold";
+    text-align: center;
+}
+.mini-title {
+    font-family: "OTEnjoystoriesBA";
+    text-align: center;
+}
+
+body {
+    background-color: #5b2386;
+}
+
+/* 마진값 일률 조정 */
+.logo-title,
+.mini-title,
+.expr-rule,
+.input,
+.btn-input {
+    margin: 80px auto;
+}
+
+/* 타이틀 */
+.logo-title {
+    width: 564px;
+    height: 265px;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/clock.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logo-title img {
+    height: 112px;
+}
+
+/* 부제목? */
+.mini-title {
+    color: #f5df4d;
+    font-size: 36px;
+}
+
+/* 법칙 설명 */
+.expr-rule {
+    width: 493px;
+    height: 96px;
+    font-size: 18px;
+    line-height: 32px;
+    background-image: url(../img/quotes.png);
+    background-repeat: no-repeat;
+    background-position: 0 15px;
+}
+.expr-rule strong {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* border 리셋 */
+#for,
+#hour,
+button {
+    /* 이 페이지 내에서 버튼은 모두 비슷한 스타일로 쓰일 거라 생각하여 태그 선택자 사용 */
+    border: none;
+}
+/* 사용자 입력 */
+#for,
+#hour {
+    width: 228px;
+    height: 57px;
+    border-radius: 7px;
+}
+#for::placeholder,
+#hour::placeholder {
+    color: #babcbe;
+}
+.input-for,
+.input-hour {
+    margin: 30px auto;
+}
+
+/* 전송 버튼 */
+.btn-input {
+    display: flex;
+    justify-content: center;
+}
+.btn-input button {
+    background-color: #fcee21;
+    padding: 21px 49px;
+    color: #5b2386;
+    font-size: 24px;
+    border-radius: 56px;
+}
+
+.btn-input::after {
+    display: block;
+    content: "";
+    width: 64px;
+    height: 72px;
+    background-image: url(../img/click.png);
+}
+
+/* 결과창 */
+.result,
+.btn-finish {
+    margin: 110px auto;
+}
+.result-notice p {
+    margin: 20px auto;
+}
+.result-for,
+.result-hour {
+    font-size: 72px;
+    vertical-align: middle;
+}
+
+/* 결과 버튼 */
+.btn-go {
+    background-color: #fcee21;
+    padding: 21px 49px;
+    color: #5b2386;
+    font-size: 24px;
+    border-radius: 56px;
+}
+.btn-share {
+    background-color: white;
+    padding: 21px 49px;
+    color: #5b2386;
+    font-size: 24px;
+    border-radius: 56px;
+    margin: 0 10px;
+}
+
+/* 회사 로고 및 저작권 */
+footer img {
+    display: block;
+    margin: 30px auto;
+}
+footer small {
+    display: block;
+    font-family: "Noto Sans KR regular";
+    font-size: 12px;
+    line-height: 1.3;
+    margin-bottom: 100px;
+}
+
+/* 모달 창 */
