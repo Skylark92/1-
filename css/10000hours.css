@@ -27,6 +27,23 @@
         url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format("opentype");
 }
 
+@keyframes 빙글빙글 {
+    /* 50% {
+        transform: rotate(180deg);
+    } */
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 /* 폰트 설정, 배경 설정 */
 :root,
 #for::placeholder,
@@ -53,19 +70,23 @@ body {
 }
 
 /* 마진값 일률 조정 */
-.logo-title,
-.mini-title,
-.expr-rule,
-.input,
+
 .btn-input {
     margin: 80px auto;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
 /* 타이틀 */
 .logo-title {
     width: 564px;
     height: 265px;
     display: flex;
+    justify-content: center;
     align-items: center;
     background-image: url(../img/clock.png);
     background-repeat: no-repeat;
@@ -79,6 +100,7 @@ body {
 .mini-title {
     color: #f5df4d;
     font-size: 36px;
+    margin: 46px 0;
 }
 
 /* 법칙 설명 */
@@ -90,6 +112,7 @@ body {
     background-image: url(../img/quotes.png);
     background-repeat: no-repeat;
     background-position: 0 15px;
+    margin: 32px 0;
 }
 .expr-rule strong {
     font-size: 24px;
@@ -108,6 +131,9 @@ button:hover {
 }
 
 /* 사용자 입력 */
+.input {
+    margin-top: 70px;
+}
 #for,
 #hour {
     width: 228px;
@@ -120,13 +146,12 @@ button:hover {
 }
 .input-for,
 .input-hour {
-    margin: 30px auto;
+    margin: 27px auto;
 }
 
 /* 전송 버튼 */
 .btn-input {
-    display: flex;
-    justify-content: center;
+    margin: 115px 0;
 }
 .btn-input button {
     background-color: #fcee21;
@@ -135,22 +160,24 @@ button:hover {
     font-size: 24px;
     border-radius: 56px;
 }
-
-.btn-input::after {
-    display: block;
-    content: "";
-    width: 64px;
-    height: 72px;
-    background-image: url(../img/click.png);
+.btn-input img {
+    vertical-align: bottom;
+    margin-bottom: -15px;
 }
 
 /* 결과창 */
-.result,
-.btn-finish {
-    margin: 110px auto;
+.result {
+    display: none;
 }
-.result-notice p {
-    margin: 20px auto;
+.result.on {
+    display: block;
+    animation: fadein linear 1s;
+}
+.result p {
+    line-height: 72px;
+}
+.btn-finish {
+    margin: 127px 0;
 }
 .result-for,
 .result-hour {
@@ -189,3 +216,11 @@ footer small {
 }
 
 /* 모달 창 */
+
+.clock {
+    display: none;
+    margin-bottom: 60px;
+}
+.clock-img {
+    animation: 빙글빙글 linear 1.2s infinite;
+}
